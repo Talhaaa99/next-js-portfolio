@@ -1,28 +1,63 @@
 import Image from "next/image";
 import React from "react";
+import ImageItem from "./ImageItem";
 
 const Skills = () => {
   return (
     <div id="skills" className="w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-blue-600">
-          Skills
-        </p>
-        <h2 className="py-2 text-gray-700">What has Talha worked with?</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
+        <h2 className="p-4 text-gray-700 pb-6">Languages I speak:</h2>
+
+        <div className="gap-5 grid grid-cols-3 pl-2 items-center justify-center text-black ">
+          <ImageItem
+            skillImg={"/../public/assets/skills/html.png"}
+            skillText={"HTML"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/css.png"}
+            skillText={"CSS"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/javascript.png"}
+            skillText={"Javascript"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/react.png"}
+            skillText={"React"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/tailwind.png"}
+            skillText={"Tailwind CSS"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/github1.png"}
+            skillText={"Github"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/Solidity.png"}
+            skillText={"Solidity"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/Hardhat.png"}
+            skillText={"Hardhat"}
+          />
+          <ImageItem
+            skillImg={"/../public/assets/skills/nextjs_icon.png"}
+            skillText={"Nextjs"}
+          />
+        </div>
+        {/*    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="p-2 shadow-xl rounded-xl hover:scale-102 ease-in duration-300 bg-slate-500">
+            <div className="flex flex-row gap-6 items-center text-black bg-blue-400">
+              <div className="">
                 <Image
                   src="/../public/assets/skills/html.png"
-                  width="64px"
-                  height="64px"
+                  width="48px"
+                  height="48px"
                   alt="/"
                 />
               </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>HTML</h3>
-              </div>
+              <h3 className="text-xl">HTML</h3>
             </div>
           </div>
           <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
@@ -130,7 +165,22 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image
+                  src="/../public/assets/skills/nextjs_icon.png"
+                  width="64px"
+                  height="64px"
+                  alt="/"
+                />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Nextjs</h3>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );

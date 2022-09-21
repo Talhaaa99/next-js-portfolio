@@ -1,46 +1,77 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose, AiOutlineMail } from "react-icons/ai";
+import React, { useEffect, useState } from "react";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineMail,
+  AiOutlineGoogle,
+  AiFillPhone,
+} from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navbar = () => {
-  const [nav, setNav] = useState();
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
-      <div className="flex justify-between items-center h-full w-full px-2 2xl:px-16">
-        <Image
-          src="/../public/assets/navLogo.png"
-          alt="/"
-          width="125"
-          height="50"
-        />
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY > 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleShadow);
+  });
+
+  return (
+    <div
+      className={
+        shadow
+          ? "fixed w-full h-20  shadow-xl z-[100] bg-slate-100"
+          : "fixed w-full h-20 bg-transparent z-[100] "
+      }
+    >
+      <div className="flex justify-end items-center h-full w-full px-2 2xl:px-16">
         <div>
           <ul className="hidden md:flex">
             <Link href="/">
-              <li className="ml-10 text-sm hover:border-b">Home</li>
+              <li className="ml-10 text-md font-semibold hover:hover:text-[#00ABFF]">
+                Home
+              </li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm hover:border-b">About</li>
+            <Link href="/#about">
+              <li className="ml-10 text-md font-semibold hover:hover:text-[#00ABFF]">
+                About
+              </li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm hover:border-b">Skills</li>
+            <Link href="/#skills">
+              <li className="ml-10 text-md tracking-wide font-semibold hover:hover:text-[#00ABFF]">
+                Skills
+              </li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm hover:border-b">Projects</li>
+            <Link href="/#projects">
+              <li className="ml-10 text-md tracking-wide font-semibold hover:hover:text-[#00ABFF]">
+                Projects
+              </li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm hover:border-b">Contact</li>
+            <Link href="/#contact">
+              <li className="ml-10 text-md tracking-wide font-semibold hover:text-[#00ABFF]">
+                Contact
+              </li>
             </Link>
           </ul>
-          <div onClick={handleNav} className="md:hidden cursor-pointer">
+          <div
+            onClick={handleNav}
+            className="md:hidden absolute pl-2 cursor-pointer left-2"
+          >
             <AiOutlineMenu size={25} />
           </div>
         </div>
@@ -58,13 +89,7 @@ const Navbar = () => {
           }
         >
           <div>
-            <div className="flex w-full items-center justify-between">
-              <Image
-                src="/../public/assets/navLogo.png"
-                alt=""
-                width="87"
-                height="35"
-              />
+            <div className="flex w-full items-center justify-end">
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400
@@ -76,44 +101,61 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-400 my-4 ">
               <p className="py-4 w-[85%] md:w-[100%]">
-                Let's build something cool together!
+                Let`&apos;`s build something cool together!
               </p>
             </div>
             <div className="py-6 flex flex-col">
               <ul className="uppercase">
                 <Link href="/">
-                  <li className="text-sm py-4">Home</li>
+                  <li onClick={handleNav} className="text-sm py-4">
+                    Home
+                  </li>
                 </Link>
-                <Link href="/">
-                  <li className="text-sm py-4">About</li>
+                <Link href="/#about">
+                  <li onClick={handleNav} className="text-sm py-4">
+                    About
+                  </li>
                 </Link>
-                <Link href="/">
-                  <li className="text-sm py-4">Skills</li>
+                <Link href="/#skills">
+                  <li onClick={handleNav} className="text-sm py-4">
+                    Skills
+                  </li>
                 </Link>
-                <Link href="/">
-                  <li className="text-sm py-4">Projects</li>
+                <Link href="/#projects">
+                  <li onClick={handleNav} className="text-sm py-4">
+                    Projects
+                  </li>
                 </Link>
-                <Link href="/">
-                  <li className="text-sm py-4">Contact</li>
+                <Link href="/#contact">
+                  <li onClick={handleNav} className="text-sm py-4">
+                    Contact
+                  </li>
                 </Link>
               </ul>
-              <div className="pt-40">
-                <p className="uppercase tracking-widest text-purple-700 text-lg pb-4 ml-2">
-                  Connect with me
-                </p>
-                <div className="flex items-center justify-between w-full sm:w-[80%] my-4">
-                  <div className=" rounded-full shadow-lg shadow-gray-400 p-3 ease-in duration-200 hover:scale-105 cursor-pointer ">
-                    <FaLinkedinIn />
-                  </div>
-                  <div className=" rounded-full shadow-lg shadow-gray-400 p-3 ease-in duration-200 hover:scale-105 cursor-pointer ">
-                    <FaGithub />
-                  </div>
-                  <div className=" rounded-full shadow-lg shadow-gray-400 p-3 ease-in duration-200 hover:scale-105 cursor-pointer ">
-                    <AiOutlineMail />
-                  </div>
-                  <div className=" rounded-full shadow-lg shadow-gray-400 p-3 ease-in duration-200 hover:scale-105 cursor-pointer ">
-                    <BsFillPersonLinesFill />
-                  </div>
+              <div className="grid grid-cols items-center justify-between gap-4 w-[500px] mx-auto py-10">
+                <Link href="https://www.linkedin.com/in/talha-toufeeq-8207551b4/">
+                  <a target="_blank" rel="noreferrer noopener">
+                    <div className="flex justify-between items-center rounded-xl shadow-md shadow-gray-300 p-3 hover:scale-105 ease-in duration-200  cursor-pointer bg-[#004b7c] ">
+                      <FaLinkedinIn className="text-white" />
+                      <p className="text-sm text-white">Talha Toufeeq</p>
+                    </div>
+                  </a>
+                </Link>
+                <Link href="https://github.com/Talhaaa99">
+                  <a target="_blank" rel="noreferrer noopener">
+                    <div className="flex justify-between items-center rounded-xl shadow-md shadow-gray-300 p-3 hover:scale-105 ease-in duration-200  cursor-pointer bg-gray-700 ">
+                      <FaGithub className="text-white" />
+                      <p className="text-sm text-white">Talhaaa99</p>
+                    </div>
+                  </a>
+                </Link>
+                <div className="flex justify-between items-center rounded-xl shadow-md shadow-gray-300 p-3 hover:scale-105 ease-in duration-200  cursor- bg-white  ">
+                  <AiOutlineGoogle />
+                  <p className="text-sm">talha.toufeeq99@gmail.com</p>
+                </div>
+                <div className=" rounded-xl shadow-md flex justify-between items-center shadow-gray-300 p-3 hover:scale-105 ease-in duration-200  cursor- bg-white ">
+                  <AiFillPhone className="rotate-90" />
+                  <p className="text-sm">+91-8971287890</p>
                 </div>
               </div>
             </div>
