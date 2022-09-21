@@ -23,7 +23,7 @@ const Projects = () => {
           <ProjectItem
             title="Spotify Clone"
             backgroundImg={spotifyImg}
-            projectUrl="https://spotify-clone-tau-smoky.vercel.app/"
+            projectUrl="https://spotify-clone-git-main-talhaaa99.vercel.app/"
             tech="
             Functional Spotify clone. Fetch, play and search for user’s songs on Spotify and play/like selected songs."
             stack="Stack: Nextjs, Tailwind CSS, Spotify Web API, Recoil, NextAuth"
