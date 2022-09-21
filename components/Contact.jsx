@@ -9,8 +9,8 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 const Contact = () => {
   return (
     <div id="contact" className="w-full overflow-hidden">
-      <div className="z-[-40] absolute rotate-[360deg] left-[20px] -bottom-[3370px] ">
-        <Image src="/assets/SuperToroid-1.png" width={364} height={322} />
+      <div className="z-[-40] absolute rotate-[360deg] left-[40px] -bottom-[3350px] ">
+        <Image src="/assets/SuperToroid-1.png" width={300} height={270} />
       </div>
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
         <h2 className="p-2 px-4 text-gray-700">Contact me</h2>
