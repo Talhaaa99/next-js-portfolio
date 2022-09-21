@@ -9,40 +9,34 @@ const Skills = () => {
         <h2 className="p-4 text-gray-700 pb-6">Languages I speak:</h2>
 
         <div className="gap-5 grid grid-cols-3 pl-2 items-center justify-center text-black ">
+          <ImageItem skillImg={"/assets/skills/html.png"} skillText={"HTML"} />
+          <ImageItem skillImg={"/assets/skills/css.png"} skillText={"CSS"} />
           <ImageItem
-            skillImg={"/../public/assets/skills/html.png"}
-            skillText={"HTML"}
-          />
-          <ImageItem
-            skillImg={"/../public/assets/skills/css.png"}
-            skillText={"CSS"}
-          />
-          <ImageItem
-            skillImg={"/../public/assets/skills/javascript.png"}
+            skillImg={"/assets/skills/javascript.png"}
             skillText={"Javascript"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/react.png"}
+            skillImg={"/assets/skills/react.png"}
             skillText={"React"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/tailwind.png"}
+            skillImg={"/assets/skills/tailwind.png"}
             skillText={"Tailwind CSS"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/github1.png"}
+            skillImg={"/assets/skills/github1.png"}
             skillText={"Github"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/Solidity.png"}
+            skillImg={"/assets/skills/Solidity.png"}
             skillText={"Solidity"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/Hardhat.png"}
+            skillImg={"/assets/skills/Hardhat.png"}
             skillText={"Hardhat"}
           />
           <ImageItem
-            skillImg={"/../public/assets/skills/nextjs_icon.png"}
+            skillImg={"/assets/skills/nextjs_icon.png"}
             skillText={"Nextjs"}
           />
         </div>
