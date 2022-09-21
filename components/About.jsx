@@ -6,18 +6,18 @@ import React from "react";
 const About = () => {
   return (
     <div id="about" className="w-full md:h-screen flex items-center p-2 py-16">
-      <div className="z-40 absolute -bottom-[970px] left-[200px] ">
+      {/* <div className="z-40 xs:hidden xl:absolute xl:-bottom-[970px] xl:left-[200px] ">
         <Image src="/assets/Pill.png" width={200} height={200} quality={100} />
       </div>
-      <div className="z-40 absolute -bottom-[250px] -right-[80px] ">
+      <div className="z-40 xs:hidden xl:absolute xl:-bottom-[250px] xl:-right-[80px] ">
         <Image src="/assets/Pill.png" width={220} height={220} quality={100} />
       </div>
-      <div className="z-40 absolute -bottom-[310px] right-[590px] ">
+      <div className="z-40 xs:hidden xl:absolute xl:-bottom-[310px] xl:right-[590px] ">
         <Image src="/assets/Pill.png" width={100} height={100} quality={100} />
       </div>
-      <div className="z-40 absolute -bottom-[780px] right-[250px] ">
+      <div className="z-40 xs:hidden xl:absolute xl:-bottom-[780px] xl:right-[250px] ">
         <Image src="/assets/Pill.png" width={130} height={130} quality={100} />
-      </div>
+      </div> */}
       <div className="z-[-40] absolute -bottom-[1400px]">
         <Image src="/assets/Line.png" width={1600} height={742} />
       </div>
