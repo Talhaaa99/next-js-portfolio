@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-[500px] md:w-full overflow-hidden">
+    <div id="contact" className="w-[500px] md:w-full sm:overflow-hidden">
       <div className="z-[-40] absolute rotate-[360deg] left-[40px] -bottom-[3350px] ">
         <Image src="/assets/SuperToroid-1.png" width={300} height={270} />
       </div>

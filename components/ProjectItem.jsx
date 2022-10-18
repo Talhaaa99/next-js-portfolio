@@ -12,7 +12,7 @@ const ProjectItem = ({
   stack,
 }) => {
   return (
-    <div className="max-w-lg p-4 shadow-md dark:bg-gray-900 dark:text-gray-100 rounded-xl hover:shadow-xl hover:scale-105 ease-in-out duration-300">
+    <div className="max-w-full p-4 shadow-md dark:bg-gray-900 dark:text-gray-100 rounded-xl hover:shadow-xl hover:scale-105 ease-in-out duration-300">
       <div className="space-y-4">
         <div className="space-y-2">
           <Image

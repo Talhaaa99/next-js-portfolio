@@ -8,7 +8,7 @@ import hackerImg from "../public/assets/HackerNews.png";
 const Projects = () => {
   return (
     <div id="projects" className="w-full">
-      <div className="w-[480px] md:max-w-[1240px] mx-auto px-2 py-16">
+      <div className="min-w-[480px] max-w-[1240px] mx-auto px-2 py-16">
         <h2 className="p-4 text-gray-700">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 justify-center align-center gap-8">
           <ProjectItem
