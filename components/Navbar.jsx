@@ -78,14 +78,14 @@ const Navbar = () => {
       </div>
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? "md:hidden fixed left-0 top-0 w-full h-full bg-black/70" : ""
         }
       >
         <div
           className={
             nav
-              ? "fixed left-0 top-0 h-screen w-[75%] sm:w-[60%] md:w-[45%] bg-gray-200 p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 h-screen w-[75%] sm:w-[60%] md:w-[45%] bg-gray-200 p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 h-full w-[75%] sm:w-[60%] md:w-[45%] bg-gray-200 p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 h-full w-[75%] sm:w-[60%] md:w-[45%] bg-gray-200 p-10 ease-in duration-500"
           }
         >
           <div>
@@ -101,7 +101,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-400 my-4 ">
               <p className="py-4 w-[85%] md:w-[100%]">
-                Let`&apos;`s build something cool together!
+                Let&apos;s build something cool together!
               </p>
             </div>
             <div className="py-6 flex flex-col">

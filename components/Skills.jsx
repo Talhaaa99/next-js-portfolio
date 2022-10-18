@@ -4,11 +4,11 @@ import ImageItem from "./ImageItem";
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <div id="skills" className="w-[480px] md:w-full lg:h-screen p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <h2 className="p-4 text-gray-700 pb-6">Languages I speak:</h2>
 
-        <div className="gap-5 grid grid-cols-3 pl-2 items-center justify-center text-black ">
+        <div className="gap-3 md:gap-5 grid grid-cols-3 pl-2 items-center justify-center text-black ">
           <ImageItem skillImg={"/assets/skills/html.png"} skillText={"HTML"} />
           <ImageItem skillImg={"/assets/skills/css.png"} skillText={"CSS"} />
           <ImageItem
@@ -21,7 +21,7 @@ const Skills = () => {
           />
           <ImageItem
             skillImg={"/assets/skills/tailwind.png"}
-            skillText={"Tailwind CSS"}
+            skillText={"Tailwind"}
           />
           <ImageItem
             skillImg={"/assets/skills/github1.png"}
